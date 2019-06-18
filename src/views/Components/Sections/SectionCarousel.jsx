@@ -21,37 +21,6 @@ class SectionCarousel extends React.Component {
             autoplay: false
         };
 
-        const items = [
-            {
-                img: require('assets/img/bg.jpg'),
-                text: 'Octavia (Meditati Blue)'
-            },
-            {
-                img: require('assets/img/bg2.jpg'),
-                text: 'The Physique Factory'
-            },
-            {
-                img: require('assets/img/bg3.jpg'),
-                text: 'The Physique Factory Mobile'
-            },
-            {
-                img: require('assets/img/bg.jpg'),
-                text: 'Annasisstant'
-            },
-            {
-                img: require('assets/img/bg.jpg'),
-                text: 'Robbins And Thompson'
-            },
-            {
-                img: require('assets/img/bg.jpg'),
-                text: 'Words 2019'
-            },
-            {
-                img: require('assets/img/bg.jpg'),
-                text: 'DDay Game UDK'
-            }
-        ];
-
         return (
             <div className={classes.section}>
                 <div className={classes.container}>
@@ -59,7 +28,7 @@ class SectionCarousel extends React.Component {
                         <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
                             <Card carousel>
                                 <Carousel {...settings}>
-                                    {this.makeCarousel(items)}
+                                    {this.makeCarousel(this.props.items)}
                                 </Carousel>
                             </Card>
                         </GridItem>

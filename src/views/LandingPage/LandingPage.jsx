@@ -14,14 +14,19 @@ import Button from "components/CustomButtons/Button.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
 import MyHeader from "components/MyHeader/MyHeader.jsx"
+import items from "settings/products.jsx";
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
 
+
 class LandingPage extends React.Component {
 
 
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         const {classes, ...rest} = this.props;
@@ -29,6 +34,7 @@ class LandingPage extends React.Component {
         return (
             <div>
                 <MyHeader
+                    links={items}
                     {...rest}
                 />
                 <Parallax filter image={require("assets/img/landing-bg.jpg")}>
@@ -60,8 +66,8 @@ class LandingPage extends React.Component {
                 </Parallax>
                 <div className={classNames(classes.main, classes.mainRaised)}>
                     <div className={classes.container}>
-                        <ProductSection/>
-                        <TeamSection/>
+                        <ProductSection items={items}/>
+                        <TeamSection items={items}/>
                         <WorkSection/>
                     </div>
                 </div>

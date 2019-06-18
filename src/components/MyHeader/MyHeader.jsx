@@ -5,13 +5,13 @@ import Header from "components/Header/Header";
 
 function MyHeader({...props}) {
     const dashboardRoutes = [];
-    const {...rest} = props;
+    const {links, ...rest} = props;
     return (
         <Header
             color="white"
             routes={dashboardRoutes}
             brand="Luke Bellamy"
-            rightLinks={<HeaderLinks/>}
+            rightLinks={<HeaderLinks links={links}/>}
             fixed
             changeColorOnScroll={{
                 height: 400,
