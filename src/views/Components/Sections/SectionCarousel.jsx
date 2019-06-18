@@ -24,11 +24,31 @@ class SectionCarousel extends React.Component {
         const items = [
             {
                 img: require('assets/img/bg.jpg'),
-                text: 'Test 1'
+                text: 'Octavia (Meditati Blue)'
             },
             {
                 img: require('assets/img/bg2.jpg'),
-                text: 'Test 2'
+                text: 'The Physique Factory'
+            },
+            {
+                img: require('assets/img/bg3.jpg'),
+                text: 'The Physique Factory Mobile'
+            },
+            {
+                img: require('assets/img/bg.jpg'),
+                text: 'Annasisstant'
+            },
+            {
+                img: require('assets/img/bg.jpg'),
+                text: 'Robbins And Thompson'
+            },
+            {
+                img: require('assets/img/bg.jpg'),
+                text: 'Words 2019'
+            },
+            {
+                img: require('assets/img/bg.jpg'),
+                text: 'DDay Game UDK'
             }
         ];
 
@@ -52,24 +72,25 @@ class SectionCarousel extends React.Component {
     makeCarousel(slides) {
         const slides_data = [];
         slides.forEach((slide) => {
-           slides_data.push(this.makeSlide(slide))
+            slides_data.push(this.makeSlide(slide))
         });
         return slides_data;
     }
 
     makeSlide({img, text}) {
-        return (<div>
-            <img
-                src={img}
-                alt="First slide"
-                className="slick-image"
-            />
-            <div className="slick-caption">
-                <h4>
-                    {text}
-                </h4>
-            </div>
-        </div>)
+        return (
+            <div>
+                <img
+                    src={img}
+                    alt={img}
+                    className="slick-image"
+                />
+                <div className="slick-caption">
+                    <h4>
+                        {text}
+                    </h4>
+                </div>
+            </div>)
     }
 
 
