@@ -31,7 +31,7 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Junior Software Engineer</h1>
+                <h1 className={classes.title}>Software Engineer</h1>
                 <h4>
                   A recent Computer Science graduate from Loughborough University in the UK.
                     I am always improving my software engineering skills through building real-world applications and small personal projects.
