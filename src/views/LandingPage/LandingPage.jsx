@@ -23,11 +23,6 @@ import WorkSection from "./Sections/WorkSection.jsx";
 
 class LandingPage extends React.Component {
 
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const {classes, ...rest} = this.props;
 
