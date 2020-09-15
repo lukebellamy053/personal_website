@@ -27,7 +27,7 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage.jsx";
 import MyHeader from "components/MyHeader/MyHeader.jsx";
-
+import items from "settings/products.jsx";
 class ProfilePage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
@@ -40,6 +40,7 @@ class ProfilePage extends React.Component {
     return (
       <div>
           <MyHeader
+              links={items}
               {...rest}
           />
         <Parallax small filter image={require("assets/img/profile-bg.jpg")} />

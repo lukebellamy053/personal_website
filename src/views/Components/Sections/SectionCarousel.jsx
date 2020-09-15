@@ -8,6 +8,7 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import Card from "components/Card/Card.jsx";
 import carouselStyle from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.jsx";
+import Link from "react-router-dom/es/Link";
 
 class SectionCarousel extends React.Component {
     render() {
@@ -46,7 +47,7 @@ class SectionCarousel extends React.Component {
         return slides_data;
     }
 
-    makeSlide({img, text}) {
+    makeSlide({img, text, id}) {
         return (
             <div>
                 <img
@@ -56,7 +57,7 @@ class SectionCarousel extends React.Component {
                 />
                 <div className="slick-caption">
                     <h4>
-                        {text}
+                        <Link to={id ? `/project/${id}` : null}><b style={{color: 'white'}}>{text}</b></Link>
                     </h4>
                 </div>
             </div>)

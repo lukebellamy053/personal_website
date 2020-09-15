@@ -14,6 +14,7 @@ import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
+import Link from "react-router-dom/es/Link";
 
 class TeamSection extends React.Component {
     render() {
@@ -44,7 +45,7 @@ class TeamSection extends React.Component {
         return itemCode;
     }
 
-    makeItem({classes, imageClasses, text, content, icon, footer}) {
+    makeItem({classes, imageClasses, id, text, content, icon, footer}) {
         return (
             <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
@@ -59,9 +60,9 @@ class TeamSection extends React.Component {
                             {content}
                         </p>
                     </CardBody>
-                    {footer &&
+                    {(footer != null || id != null) &&
                     <CardFooter className={classes.justifyCenter}>
-                        {footer}
+                        {footer != null ? footer : <Link to={`/project/${id}`}>Read More</Link>}
                     </CardFooter>
                     }
                 </Card>
