@@ -1,15 +1,15 @@
 import React from 'react'
-import {OctaviaArticle} from "components/Projects/Octavia/OctaviaArticle";
+import OctaviaArticle from "components/Projects/Octavia/OctaviaArticle";
 
 const items = [
     {
         id: 'octavia',
         img: require('assets/img/projects/oct/bg.jpg'),
         icon: require('assets/img/projects/oct/icon.png'),
-        text: 'Octavia (Meditati Blue)',
+        text: 'The Online Office',
         content: (
-            <p>Octavia is my latest project that I'm working on alongside a business partner. Octavia is a contract
-                dispute management platform that helps organise and drive down costs in the mediation process.</p>),
+            <p>The Online Office is my latest project that I'm working on alongside a business partner. The Online Office is a contract
+                dispute management platform that helps organise and drive down costs in the mediation process. It also allows users to get legal assistance via a question and answer system</p>),
         article: (<OctaviaArticle/>)
     },
     {
