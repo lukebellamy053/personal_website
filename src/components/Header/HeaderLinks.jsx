@@ -29,7 +29,7 @@ function HeaderLinks({...props}) {
         ];
         links.forEach((link) => {
             linkHTML.push(
-                <Link to="/" className={classes.dropdownLink}>
+                <Link to={"/project/" + link.id} className={classes.dropdownLink}>
                     {link.text}
                 </Link>
             )

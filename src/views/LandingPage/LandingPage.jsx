@@ -40,7 +40,7 @@ class LandingPage extends React.Component {
                                 <h4>
                                     First Class Computer Science graduate from Loughborough University.
                                     Started 2 software companies and learned invaluable lessons along the way, hoping to build something big one day.
-                                    Thie website is a collection of some of my earlier and newer projects
+                                    This website is a collection of some of my earlier and newer projects
                                 </h4>
                                 <br/>
                                 <Button
